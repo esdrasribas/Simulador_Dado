@@ -1,0 +1,42 @@
+from random import randint
+from time import sleep
+
+
+sleep(1.5)
+
+perguntar = input('\n\tVocê gostaria de jogar o dado? Digite [S]im ou [N]ão: ').upper()
+
+while True:
+    
+    if perguntar == 'S':
+
+        sorteia = randint(1,6)
+        print('Ok, então vamos continuar para o Jogo!')
+        print()
+        print(f'\n\tSeu número sorteado é: {sorteia}')
+        sleep(1)
+
+        novamente = input('\n\tDeseja continuar jogando? Digite [S]im ou [N]ão: ').upper()
+        if novamente == 'N':
+            print('\n\tObrigado por jogar. Volte sempre! ')
+            break
+        if novamente == 'S':
+            continue
+
+        else:
+            print('\n\tDigite apenas o que foi solicitado. Recomece o programa...')
+            break
+
+
+    elif perguntar == 'N':
+        print('\n\tQue pena... Volte sempre!')
+        break
+
+    else:
+        print('\n\tDigite apenas o que foi solicitado. Recomece o programa...')
+        break
+        
+
+
+
+    
